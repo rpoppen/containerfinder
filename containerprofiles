@@ -1,0 +1,21 @@
+class ContainerProfile:
+  def __init__(self, name, height, width, depth):
+    self.name = name
+    self.height = height
+    self.width = width
+    self.depth = depth
+
+a = ContainerProfile ('Record carton', 10, 15, 12)
+b = ContainerProfile ('Document box-legal', 10.25, 5, 15.25)
+c = ContainerProfile ('Document box-letter', 10.25, 5, 12.25)
+d = ContainerProfile ('Document box-slim legal', 10.25, 2.5, 15.25)
+e = ContainerProfile ('Document box-slim letter', 10.25, 2.5, 12.25)
+f = ContainerProfile ('Document box-tall legal', 12.5, 5, 15.5)
+g = ContainerProfile ('Document box-wide letter', 10.25, 7, 12.25)
+h = ContainerProfile ('Document box-wide legal', 10.25, 7, 15.25)
+i = ContainerProfile ('Flat box 1', 3, 12.5, 9.5)
+j = ContainerProfile ('Flat box 2', 3, 13, 11)
+k = ContainerProfile ('Flat box 3', 1.5, 11.5, 14.5)
+l = ContainerProfile ('Flat box 4', 3, 11, 15)
+m = ContainerProfile ('Flat box 5', 3, 11.5, 15)
+n = ContainerProfile ('Flat box 6', 1.5, 11.5, 17.5)
