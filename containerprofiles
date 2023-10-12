@@ -49,7 +49,7 @@ ao = ContainerProfile ('Microfilm box', 4.125, 4.125, 10.625)
 ap = ContainerProfile ('Microfiche box', 4.5, 4, 6.25)
 aq = ContainerProfile ('Storage box', 6, 7.375, 10.375)
 ar = ContainerProfile ('Textile roll box 1', 4, 6, 36)
-as = ContainerProfile ('Textile roll box 2', 4, 6, 48)
+bs = ContainerProfile ('Textile roll box 2', 4, 6, 48)
 at = ContainerProfile ('Textile roll box 3', 8, 10, 48)
 au = ContainerProfile ('LP box 1', 13.25, 13.5, 3)
 av = ContainerProfile ('LP box 2', 13, 13, 10.5)
@@ -61,7 +61,7 @@ ba = ContainerProfile ('Legacy box 5', 3.5, 24.5, 32)
 bb = ContainerProfile ('Legacy box 6', 3, 12, 25)
 bc = ContainerProfile ('Legacy box 7', 5.5, 9, 16.75)
 
-list = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, ba, bb, bc]
+list = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao, ap, aq, ar, bs, at, au, av, aw, ax, ay, az, ba, bb, bc]
 
 he = input('Height')
 wi = input('Width')
@@ -70,10 +70,53 @@ de = input('Depth')
 ExactList = []
 AlmostList = []
 
+#checks for exact matches and close matches in height
 for x in list:
-  if x.height == he:
-    ExactList.append(x.name)
-  if x.height < (x.height + 0.5) or x.height > (x.height - 0.5):
+  if float(x.height) == float(he):
+      ExactList.append(x.name)
+  elif float(x.height) < (float(he) + 0.5) and float(x.height) > (float(he) - 0.5):
     AlmostList.append(x.name)
+
+#updates exact match list for height and width
+for x in list:
+    if x.name in ExactList and float(x.width) != float(wi):
+        AlmostList.append(x.name)
+        ExactList.remove(x.name)
+
+#updates almost match list for height and width
+for x in list:
+    if x.name in AlmostList:
+        if float(x.width) > (float(wi) + 0.5):
+            AlmostList.remove(x.name)
+        elif float(x.width) < (float(wi) -0.5):
+            AlmostList.remove(x.name)
+
+#updates exact match list for height, width, and depth
+for x in list:
+    if x.name in ExactList and float(x.depth) != float(de):
+        AlmostList.append(x.name)
+        ExactList.remove(x.name)
+        
+#updates almost match list for height, width, and depth
+for x in list:
+    if x.name in AlmostList:
+        if float(x.depth) > (float(de) + 0.5):
+            AlmostList.remove(x.name)
+        elif float(x.depth) < (float(de) -0.5):
+            AlmostList.remove(x.name)
+            
+
+if len(ExactList) > 0:
+    print("I'm an exact match!")
+    print(ExactList)
+    exit()
+else:
+    print("Nothing matches exactly. :(")
+
+if len(AlmostList) > 0:
+    print("I'm pretty close!")
+    print(AlmostList)
+else:
+    print("I've got nothing close for ya. :(")
     
 
