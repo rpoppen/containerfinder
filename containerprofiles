@@ -67,3 +67,13 @@ he = input('Height')
 wi = input('Width')
 de = input('Depth')
 
+ExactList = []
+AlmostList = []
+
+for x in list:
+  if x.height == he:
+    ExactList.append(x.name)
+  if x.height < (x.height + 0.5) or x.height > (x.height - 0.5):
+    AlmostList.append(x.name)
+    
+
