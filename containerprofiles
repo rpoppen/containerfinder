@@ -69,6 +69,8 @@ de = input('Depth')
 
 ExactList = []
 AlmostList = []
+SwitchExactList = []
+SwitchAlmostList = []
 
 #checks for exact matches and close matches in height
 for x in list:
@@ -105,7 +107,48 @@ for x in list:
         elif float(x.depth) < (float(de) -0.5):
             AlmostList.remove(x.name)
             
+#checks for exact matches and close matches in height with width and depth switched
+for x in list:
+  if float(x.height) == float(he):
+      SwitchExactList.append(x.name)
+  elif float(x.height) < (float(he) + 0.5) and float(x.height) > (float(he) - 0.5):
+    SwitchAlmostList.append(x.name)
 
+#updates exact match list for height and width with width and depth switched
+for x in list:
+    if x.name in SwitchExactList and float(x.depth) != float(wi):
+        SwitchAlmostList.append(x.name)
+        SwitchExactList.remove(x.name)
+
+#updates almost match list for height and width with width and depth switched
+for x in list:
+    if x.name in SwitchAlmostList:
+        if float(x.depth) > (float(wi) + 0.5):
+            SwitchAlmostList.remove(x.name)
+        elif float(x.depth) < (float(wi) -0.5):
+            SwitchAlmostList.remove(x.name)
+
+#updates exact match list for height, width, and depth with width and depth switched
+for x in list:
+    if x.name in SwitchExactList and float(x.width) != float(de):
+        SwitchAlmostList.append(x.name)
+        SwitchExactList.remove(x.name)
+        
+#updates almost match list for height, width, and depth with width and depth switched
+for x in list:
+    if x.name in SwitchAlmostList:
+        if float(x.width) > (float(de) + 0.5):
+            SwitchAlmostList.remove(x.name)
+        elif float(x.width) < (float(de) -0.5):
+            SwitchAlmostList.remove(x.name)
+for x in SwitchExactList:
+    if x not in ExactList:
+        ExactList.append(x)
+        
+for x in SwitchAlmostList:
+    if x not in AlmostList:
+        AlmostList.append(x)
+            
 if len(ExactList) > 0:
     print("I'm an exact match!")
     print(ExactList)
