@@ -162,5 +162,3 @@ if len(AlmostList) > 0:
     print(AlmostList)
 else:
     print("I've got nothing close for ya. :(")
-    
-
