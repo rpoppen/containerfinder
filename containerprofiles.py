@@ -48,6 +48,7 @@ al = ContainerProfile ('Negatives box 4', 5.5, 4.5, 7.5)
 ala = ContainerProfile ('Binder box', 4.12, 12.5, 13)
 am = ContainerProfile ('Photo box 1', 5, 15.5, 12)
 an = ContainerProfile ('Photo box 2', 5, 6.625, 4.625)
+ana = ContainerProfile ('Glass plate negative box, 6, 8.5, 6)
 ao = ContainerProfile ('Microfilm box', 4.125, 4.125, 10.625)
 ap = ContainerProfile ('Microfiche box', 4.5, 4, 6.25)
 aq = ContainerProfile ('Storage box', 6, 7.375, 10.375)
@@ -65,7 +66,7 @@ bb = ContainerProfile ('Legacy box 6', 3, 12, 25)
 bc = ContainerProfile ('Legacy box 7', 5.5, 9, 16.75)
 bd = ContainerProfile ('Legacy box 8', 1, 7.88, 7.88)
 
-list = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ada, adb, ae, af, ag, ah, ai, aj, ak, al, ala, am, an, ao, ap, aq, ar, bs, at, au, av, aw, ax, ay, az, ba, bb, bc, bd]
+list = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ada, adb, ae, af, ag, ah, ai, aj, ak, al, ala, am, an, ana, ao, ap, aq, ar, bs, at, au, av, aw, ax, ay, az, ba, bb, bc, bd]
 
 he = input('Height')
 wi = input('Width')
