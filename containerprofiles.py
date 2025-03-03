@@ -37,10 +37,12 @@ ac = ContainerProfile ('Flat box 21', 3, 36, 24)
 ad = ContainerProfile ('Flat box 22', 2.75, 16, 13)
 ada= ContainerProfile ('Flat box 23', 2.875, 22.75, 30.875)
 adb= ContainerProfile ('Flat box 24', 1.5, 22, 17)
-ae = ContainerProfile ('Video cassette box', 4.875, 15.5, 15.5)
+ae = ContainerProfile ('Video cassette box 1', 4.875, 15.5, 15.5)
+aea = ContainerProfile ('Video cassette box 2', 4.875, 7.75, 16.375)
 af = ContainerProfile ('Audio cassette box', 3, 12, 9)
 ag = ContainerProfile ('CD box 1', 5.875, 5.5, 12)
 ah = ContainerProfile ('CD box 2', 5, 15, 6)
+aha = ContainerProfile ('Card file box', 3.125, 5.125, 12)
 ai = ContainerProfile ('Negatives box 1', 5.5, 12, 7.5)
 aj = ContainerProfile ('Negatives box 2', 5.5, 7.5, 12)
 ak = ContainerProfile ('Negatives box 3', 4.5, 5.5, 12)
@@ -67,7 +69,7 @@ bb = ContainerProfile ('Legacy box 6', 3, 12, 25)
 bc = ContainerProfile ('Legacy box 7', 5.5, 9, 16.75)
 bd = ContainerProfile ('Legacy box 8', 1, 7.88, 7.88)
 
-list = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ada, adb, ae, af, ag, ah, ai, aj, ak, al, ala, am, an, ana, anb, ao, ap, aq, ar, bs, at, au, av, aw, ax, ay, az, ba, bb, bc, bd]
+list = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad, ada, adb, ae, aea, af, ag, ah, aha, ai, aj, ak, al, ala, am, an, ana, anb, ao, ap, aq, ar, bs, at, au, av, aw, ax, ay, az, ba, bb, bc, bd]
 
 he = input('Height')
 wi = input('Width')
